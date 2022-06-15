@@ -1,6 +1,8 @@
 import React from "react";
 import InfoWrapper from "../styles/InfoWrapper";
-const Info = () => {
+const Info = (props) => {
+    //destructure props
+    const {patientName,age,gender,notes,medicine,date,Sno}=props;
   return (
     <InfoWrapper>
       <div className="heading">
@@ -18,27 +20,31 @@ const Info = () => {
         <div className="info">
             <p className="right">
                 <span>S.No:</span>
-                <span>0</span>
+                <span>{Sno}</span>
             </p>
             <p className="detail">
                 <span>Patient Name:</span>
-                <span className="border">John Doe</span>
+                <span className="border">{patientName}</span>
             </p>
             <p className="detail">
                 <span>Patient Age:</span>
-                <span className="border">18</span>
+                <span className="border">{age}</span>
             </p>
             <p className="detail">
                 <span>Patient Gender:</span>
-                <span className="border">John Doe</span>
+                <span className="border">{gender}</span>
+            </p>
+            <p className="detail">
+                <span>Date:</span>
+                <span className="border">{date}</span>
             </p>
             <p className="detail">
                 <span>Patient Notes:</span>
-                <span className="border">John Doe</span>
+                <span className="border">{notes}</span>
             </p>
             <p className="detail">
                 <span>Medicine:</span>
-                <span className="border">John Doe</span>
+                <span className="border">{medicine}</span>
             </p>
             <p className="right mr">
                 <span>Doctor's Signature:</span>
